@@ -1,0 +1,416 @@
+@font-face {
+    font-family: cienfuegos;
+    src: url('../fonts/Cienfuegos_demo_font.ttf');
+}
+
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: aliceblue;
+	margin: 0;
+	padding: 0;
+}
+
+
+section {
+	min-height: 100vh;
+}
+
+
+#intro {
+	background-color: #e0f2f1;
+	position: relative;
+}
+
+#skills {
+	background-color: #fff9c4;
+}
+
+#work {
+	background-color: #ffebee;
+}
+
+#about {
+	background-color: #b3e5fc;
+  padding-bottom: 10rem;
+}
+
+
+
+#hs {
+	color: black;
+	text-align: center;
+}
+
+.photo {
+	width: 40%;
+	max-width: 200px;
+	border-radius: 100%;
+	border: solid 4px #00796b;
+	margin-top: 1rem;
+	transition: all .3s ease-out;
+}
+
+.photo:hover {
+	cursor: pointer;
+	transform: rotate(-15deg);
+}
+
+h1, h2, p {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2 {
+	font-family: 'cienfuegos', sans-serif;
+}
+
+h1 {
+	font-size: 5rem;
+}
+
+#intro h2 {
+	font-size: 3rem;
+}
+
+.note,
+.work-note {
+	font-family: 'Itim', cursive;
+	text-align: justify;
+	padding: 1rem;
+	padding-top: 2rem;
+  	font-size: 1.3rem;
+}
+
+.question {
+  color: #dd2c00;
+  padding-left: 1.5rem;
+  padding-bottom: .5rem;
+}
+
+
+#work-list {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.odd-instance {
+  background-color: rgb(243, 229, 245);
+}
+
+.even-instance {
+  background-color: rgb(197, 202, 233);
+}
+
+.work-instance {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  z-index: 10;
+}
+
+.work-note {
+  font-style: italic;
+}
+
+.work-note a {
+  font-style: normal;
+  color: tomato;
+}
+
+.work-header {
+  margin: 0;
+  font-size: 2.3rem;
+  color: darkred;
+  padding-left: 1rem;
+}
+
+
+#general-menu {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  transition: all .3s ease-out;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.menu a {
+	color: black;
+	text-decoration: none;
+}
+
+.menu div p {
+	padding: 0;
+	font-size: 2rem;
+	font-family: 'cienfuegos', sans-serif;
+}
+
+.menu div {
+	background-color: teal;
+	height: 55px;
+	flex-grow: 1;
+	flex-basis: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+  z-index: 8;
+}
+
+.menu div:hover,
+.collapser:hover {
+	background-color: #b2dfdb;
+  	cursor: pointer;
+}
+
+
+.collapser {
+  background-color: teal;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  z-index: 5;
+  border-radius: 100%;
+
+  position: relative;
+  top: 40px;
+  text-align: center;
+  padding-top: .5rem;
+}
+
+
+#skills,
+#work,
+#about {
+	position: relative;
+}
+
+#skills h1,
+#work h1,
+#about h1 {
+	font-size: 5rem;
+	text-align: center;
+}
+
+
+
+#skill-list {
+  padding-bottom: 5rem;
+}
+
+#skill-list h3 {
+	font-size: 1.8rem;
+	font-family: 'cienfuegos', sans-serif;
+	font-weight: normal;
+	padding-left: 1rem;
+	padding-top: 0.2rem;
+  color: tomato;
+}
+
+#skill-list li {
+	font-family: 'Itim', cursive;
+	list-style-type: none;
+  font-size: 1.2rem;
+}
+
+#skill-list ul {
+  margin: 0;
+}
+
+.contacts {
+  padding-top: 2rem;
+  list-style-type: none;
+  margin: 0;
+  font-family: 'Itim', cursive;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+@media (min-width: 870px) {
+
+	#intro,
+	#skills,
+	#work,
+	#about {
+		padding-top: 8rem;
+	}
+
+	#intro .greeting {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	#intro .greeting p {
+		font-size: 2.2rem;
+	}
+
+	#skill-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		flex-wrap: wrap;
+		padding-bottom: 0;
+	}
+
+	#skills {
+		padding-bottom: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	#skills h3 {
+		font-size: 3rem;
+	}
+
+	#skills > article {
+		flex-basis: 30%;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	#skills > article p::after {
+		content: "As a programmer, I feel a personal attraction for C-derived languages. I guess they have a very good organized syntax. However, of course, I am totally open to use any other language in the market. I have always believed that a high percentage of a product success lies in the tool chosen to do it. So I do not like to get stuck in only one thing, but go forward. Now, please come in. The doors to my skills are officially open";
+	}
+
+	#skills > div {
+		flex-basis: 70%;
+		background-color: #ffe082;
+	}
+
+	#skill-list > div {
+		flex-basis: 50%;
+		padding-left: 4rem;
+		padding-bottom: 3rem;
+	}
+
+	#skill-list > div:first-child,
+	#skill-list > div:last-child {
+		background-color: #fafafa;
+	}
+
+
+
+	#work {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#work article,
+	#work .final {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	#work .final {
+		padding-bottom: 2rem;
+	}
+
+	#work-list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.work-instance {
+		flex-basis: 33%;
+		flex-grow: 1;
+
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+    z-index: 10;
+	}
+
+	.work-instance p {
+		font-size: 1.5rem;
+	}
+
+	.work-instance h2 {
+		font-size: 3rem;
+	}
+
+
+
+
+	#about {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#about .about-notes {
+		display: flex;
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+
+	#about .about-notes div {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+	#about .about-notes div:first-child {
+		border-right: 2px solid black;
+	}
+
+
+
+	.collapser {
+		display: none;
+	}
+
+	#general-menu {
+		top: 0;
+	}
+
+	.menu div {
+		flex-basis: 25%;
+		height: 75px;
+		background-color: black;
+
+		transition: all .3s ease-out;
+	}
+
+
+
+	.menu div a {
+		color: white;
+		font-size: 2.2rem;
+		text-decoration: none;
+		padding-left: 4.5rem;
+		padding-right: 4.5rem;
+		padding-top: 0.8rem;
+		padding-bottom: 0.8rem;
+	}
+
+	.menu div:hover a {
+		color: black;
+	}
+
+	.note {
+		font-size: 1.5rem;
+    padding-bottom: 2rem;
+	}
+
+	section {
+		border-bottom: 2px solid black;
+	}
+
+
+
+}
